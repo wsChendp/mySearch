@@ -39,6 +39,7 @@ func (s *Badger) GetDbPath() string {
 	return s.path
 }
 
+// test
 // (超出接口规范，额外多出来的方法)
 func (s *Badger) CheckAndGC() {
 	lsmSize1, vlogSize1 := s.db.Size()
