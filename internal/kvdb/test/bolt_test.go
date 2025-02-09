@@ -17,7 +17,7 @@ func TestBolt(t *testing.T) {
 		}
 	}
 
-	t.Run("bolt_test", testPipeline)
+	t.Run("bolt_test", testPipeline) //子测试
 }
 
 // go test -v ./internal/kvdb/test -run=^TestBolt$ -count=1

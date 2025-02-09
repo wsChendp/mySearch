@@ -8,6 +8,11 @@ import (
 	"github.com/Orisun/radic/v2/util"
 )
 
+const (
+	BOLT = iota
+	BADGER
+)
+
 // redis也是一种KV数据库，读者可以自行用redis实现IKeyValueDB接口
 type IKeyValueDB interface {
 	Open() error                              //初始化DB

@@ -133,7 +133,7 @@ func testIterDB(db kvdb.IKeyValueDB) error {
 	return nil
 }
 
-func testPipeline(t *testing.T) { //整个测试流
+func testPipeline(t *testing.T) { //整个测试流，面向接口进行测试
 	defer teardown()
 	setup()
 

@@ -41,7 +41,7 @@ func ShouldExpression(exps ...TermQueryV0) TermQueryV0 {
 			array = append(array, exp)
 		}
 	}
-	return TermQueryV0{Should: array}
+	return TermQueryV0{Should: array} //返回一个TermQueryV0结构体，其中Should字段被赋值为array，Must和Keyword字段为空
 }
 
 //print函数会自动调用变量的String()方法

@@ -14,9 +14,9 @@ import (
 
 // 外观Facade模式。把正排和倒排2个子系统封装到了一起
 type Indexer struct {
-	forwardIndex kvdb.IKeyValueDB
-	reverseIndex reverseindex.IReverseIndexer
-	maxIntId     uint64
+	forwardIndex kvdb.IKeyValueDB             //正排索引
+	reverseIndex reverseindex.IReverseIndexer //倒排索引
+	maxIntId     uint64                       //文档的IntId
 }
 
 // 初始化索引
