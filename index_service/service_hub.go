@@ -101,6 +101,7 @@ func (hub *ServiceHub) UnRegist(service string, endpoint string) error {
 }
 
 // 服务发现。client每次进行RPC调用之前都查询etcd，获取server集合，然后采用负载均衡算法选择一台server。或者也可以把负载均衡的功能放到注册中心，即放到getServiceEndpoints函数里，让它只返回一个server
+// 策略模式，使用外部方式来
 func (hub *ServiceHub) GetServiceEndpoints(service string) []string {
 	ctx := context.Background()
 	prefix := strings.TrimRight(SERVICE_ROOT_PATH, "/") + "/" + service + "/"

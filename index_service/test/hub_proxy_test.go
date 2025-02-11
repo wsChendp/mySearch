@@ -10,6 +10,7 @@ import (
 
 func TestGetServiceEndpointsByProxy(t *testing.T) {
 	const qps = 10 //qps限制为10
+
 	proxy := index_service.GetServiceHubProxy(etcdServers, 3, qps)
 
 	endpoint := "127.0.0.1:5000"
